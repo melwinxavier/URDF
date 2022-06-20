@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<robot name="urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find urdf_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find urdf_description)/urdf/urdf.trans" />
+<xacro:include filename="$(find urdf_description)/urdf/urdf.gazebo" />
+<xacro:include filename="$(find urdf_description)/gazebo/urdf_detailed_materials.gazebo" />
+<xacro:include filename="$(find urdf_description)/gazebo/urdf_detailed_physics.gazebo" />
+<xacro:include filename="$(find urdf_description)/gazebo/urdf_detailed_plugins.gazebo" />
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.006896284190165957 0.019607147279650704 0.14348524088836095"/>
+    <mass value="13.487823737790368"/>
+    <inertia ixx="0.230054" ixy="0.000177" ixz="-0.001714" iyy="0.319075" iyz="-8.5e-05" izz="0.449814"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rightwheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.3086201495642126e-05 0.04910413098013125 -3.5306191575323886e-05"/>
+    <mass value="1.726156836217546"/>
+    <inertia ixx="0.004183" ixy="-3e-06" ixz="1e-06" iyy="0.007094" iyz="-2e-06" izz="0.004183"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.001 0.207 -0.1"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/rightwheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.001 0.207 -0.1"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/rightwheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leftwheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.4071078713470903e-05 -0.04910432960929098 -5.388889840672595e-05"/>
+    <mass value="1.7280872851640348"/>
+    <inertia ixx="0.004186" ixy="1e-06" ixz="0.0" iyy="0.007099" iyz="3e-06" izz="0.004187"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.001 -0.247 -0.1"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/leftwheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.001 -0.247 -0.1"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/leftwheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mainbody_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.21747001443364508 -0.0005671374063579392 0.36936745987457287"/>
+    <mass value="46.397497082791276"/>
+    <inertia ixx="3.074402" ixy="-7e-06" ixz="0.002501" iyy="2.968327" iyz="-0.000517" izz="1.818192"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.224 -0.0198 -0.25"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/mainbody_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.224 -0.0198 -0.25"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/mainbody_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="fornt_caster_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.025000797505036365 -3.9898639947466563e-16 -0.03045808605341238"/>
+    <mass value="0.4573656248802166"/>
+    <inertia ixx="0.000244" ixy="-0.0" ixz="0.0" iyy="0.000244" iyz="0.0" izz="0.000192"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.171 -0.02 -0.07"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/fornt_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.171 -0.02 -0.07"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/fornt_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_caster_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.024999202494963707 -1.0061396160665481e-16 -0.030458086053412395"/>
+    <mass value="0.4573656248802168"/>
+    <inertia ixx="0.000244" ixy="0.0" ixz="0.0" iyy="0.000244" iyz="0.0" izz="0.000192"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.173 -0.02 -0.07"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/back_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.173 -0.02 -0.07"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/back_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="head_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0591263474424927 -0.006383264290873913 0.17273572361437428"/>
+    <mass value="5.261861266896012"/>
+    <inertia ixx="0.076159" ixy="0.001014" ixz="-0.017983" iyy="0.096387" iyz="0.001418" izz="0.073416"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.104 -0.0195 -0.99"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/head_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.104 -0.0195 -0.99"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/head_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="drive_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0704929590638793 0.13000000000000017 0.149860425468055"/>
+    <mass value="10.196776322164792"/>
+    <inertia ixx="0.123658" ixy="-0.0" ixz="-0.003995" iyy="0.034068" iyz="-0.0" izz="0.117818"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.10147 0.11 -0.06"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/drive_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.10147 0.11 -0.06"/>
+    <geometry>
+      <mesh filename="package://urdf_description/meshes/drive_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="right_motor" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.001 -0.207 0.1"/>
+  <parent link="base_link"/>
+  <child link="rightwheel_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="left_motor" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.001 0.247 0.1"/>
+  <parent link="base_link"/>
+  <child link="leftwheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="base_main_link" type="fixed">
+  <origin rpy="0 0 0" xyz="0.224 0.0198 0.25"/>
+  <parent link="base_link"/>
+  <child link="mainbody_1"/>
+</joint>
+
+<joint name="caster_fornt_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.171 0.02 0.07"/>
+  <parent link="base_link"/>
+  <child link="fornt_caster_1"/>
+</joint>
+
+<joint name="caster_back_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.173 0.02 0.07"/>
+  <parent link="base_link"/>
+  <child link="back_caster_1"/>
+</joint>
+
+<joint name="main_head_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.12 -0.0003 0.74"/>
+  <parent link="mainbody_1"/>
+  <child link="head_1"/>
+</joint>
+
+<joint name="Rigid9" type="fixed">
+  <origin rpy="0 0 0" xyz="0.10147 -0.11 0.06"/>
+  <parent link="base_link"/>
+  <child link="drive_1"/>
+</joint>
+
+</robot>
